@@ -77,11 +77,12 @@ gulp.task('stylus', function() {
 //---------------------------------------------------------
 gulp.task('scripts', function() {
   return gulp.src(sources.scripts)
+    .pipe(jshint())
     .pipe(plumber({
       errorHandler: notify.onError({
         sound: 'Purr',
         title: "Javascript Error:",
-        message:  "<%= error.message %>"})
+        message:  "Line: <%= error.lineNumber %> -- <%= error.message %>"})
     }))
     .pipe(uglify())
     .pipe(gulp.dest(destinations.scripts))
@@ -113,9 +114,9 @@ gulp.task('watch', function() {
 //---------------------------------------------------------
 gulp.task('sync', function() {
   sync({
-    config: {
-      browser: 'google chrome'
-    }
+    debugInfo: false,
+    open: 'localhost',
+    browser: "google chrome"
   })
 });
 
