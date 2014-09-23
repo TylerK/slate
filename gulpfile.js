@@ -24,9 +24,9 @@ var
 // Sources
 //---------------------------------------------------------
 var sources = {
-  images    : 'app/assets/images',
-  fonts     : 'app/assets/fonts',
-  icons     : 'app/assets/icons',
+  images    : 'app/assets/images/**/*',
+  fonts     : 'app/assets/fonts/**/*',
+  icons     : 'app/assets/icons/**/*',
   stylus    : 'app/stylesheets/**/*',
   scripts   : 'app/javascripts/**/*',
   views     : 'app/views/**/*'
@@ -44,6 +44,24 @@ var destinations = {
   scripts   : 'public/scripts',
   views     : 'public/'
 };
+
+
+//
+// Move static assets from app to public
+//---------------------------------------------------------
+gulp.task('assets', function() {
+
+  gulp.src(sources.images)
+    .pipe(gulp.dest(destinations.images));
+
+  gulp.src(sources.fonts)
+    .pipe(gulp.dest(destinations.fonts));
+
+  gulp.src(sources.icons)
+    .pipe(gulp.dest(destinations.icons));
+
+});
+
 
 
 //
@@ -134,4 +152,4 @@ gulp.task('server', function() {
 //
 // The big deal
 //---------------------------------------------------------
-gulp.task('default', ['stylus', 'scripts', 'sync', 'server', 'watch']);
+gulp.task('default', ['assets', 'stylus', 'scripts', 'sync', 'server', 'watch']);
