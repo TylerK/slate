@@ -1,0 +1,56 @@
+.f-controls {
+  clearfix();
+  border-box();
+
+  .f-control {
+    display: block;
+    float: left;
+    text-align: center;
+    width: calc(33.3333%);
+    margin: 0;
+    padding: 1rem 0;
+
+    &.f-active {
+      box-shadow: inset 0 3px 0 0 $colors['blueBright'];
+      fill: $colors['menuText'];
+    }
+
+    svg {
+      vertical-align: middle;
+      fill: $colors['silver']
+    }
+  }
+}
+
+.f-control {
+  border-box();
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 0.618rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+    fill: $colors['silver'];
+  }
+}
+
+.f-control-bar {
+  clearfix();
+  padding: 1rem 0;
+}
+
+.f-menu-toggle {
+  cursor: pointer;
+  vertical-align: middle;
+
+  svg {
+    display: block;
+    float: left;
+    margin-bottom: -1px;
+  }
+}

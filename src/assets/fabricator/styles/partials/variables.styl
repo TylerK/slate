@@ -1,0 +1,46 @@
+$colors = {
+  blue:         #0070b9,
+  blueBright:   #00b2e2,
+  orange:       #ff9b29,
+  yellowOrange: #fdb73d,
+  orangeRed:    #fd7222,
+  red:          #ca2808,
+  green:        #b5d334,
+  greyDarker:   #24353f,
+  greyDark:     #67757d,
+  greyMedium:   #8f979c,
+  greyLight:    #b8c3c9,
+  greyLighter:  #d3d7d9,
+  greyLightest: #e4e6e7,
+  silver:       #e7e5e4,
+  offWhite:     #f2f8fb,
+  white:        #ffffff
+}
+
+$colors-usage = {
+  menuBackground:  $colors['greyDarker'],
+  menuText:        $colors['greyLight'],
+  normal:          $colors['greyLight']
+}
+
+$colors       = merge($colors, $colors-usage);
+$menu-width   = 14rem;
+
+//
+// General use mixins
+//
+clearfix() {
+  &:after {
+    clear: both;
+  }
+
+  &:before,
+  &:after {
+    display: table;
+    content: ' ';
+  }
+}
+
+border-box() {
+  box-sizing: border-box;
+}
