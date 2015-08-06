@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title></title>
+  <title>Components | Lyve</title>
 
   <link rel="stylesheet" href="/assets/fabricator/styles/f.css">
 
@@ -64,9 +64,19 @@
     
         <li>
           <a href="colors.html" class="f-menu__heading">Colors</a>
+        </li>
+    
+        <li>
+          <a href="atoms.html" class="f-menu__heading">Atoms</a>
           <ul>
             <li>
-              <a href="colors.html#index">Index</a>
+              <a href="atoms.html#buttons">Buttons</a>
+            </li>
+            <li>
+              <a href="atoms.html#checkbox">Checkbox</a>
+            </li>
+            <li>
+              <a href="atoms.html#text-input">Text Input</a>
             </li>
           </ul>
         </li>
@@ -74,51 +84,25 @@
           <a href="components.html" class="f-menu__heading">Components</a>
           <ul>
             <li>
-              <a href="components.html#buttons">Buttons</a>
+              <a href="components.html#cards">Cards</a>
             </li>
             <li>
-              <a href="components.html#checkbox">Checkbox</a>
-            </li>
-            <li>
-              <a href="components.html#lists">Lists</a>
-            </li>
-            <li>
-              <a href="components.html#paragraph">Paragraph</a>
-            </li>
-            <li>
-              <a href="components.html#radio">Radio</a>
-            </li>
-            <li>
-              <a href="components.html#select">Select</a>
-            </li>
-            <li>
-              <a href="components.html#table">Table</a>
-            </li>
-            <li>
-              <a href="components.html#text-input">Text Input</a>
-            </li>
-            <li>
-              <a href="components.html#textarea">Textarea</a>
+              <a href="components.html#form">Form</a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="structures.html" class="f-menu__heading">Structures</a>
+          <a href="typography.html" class="f-menu__heading">Typography</a>
           <ul>
             <li>
-              <a href="structures.html#form">Form</a>
+              <a href="typography.html#headings">Headings</a>
+            </li>
+            <li>
+              <a href="typography.html#paragraph">Paragraph</a>
             </li>
           </ul>
         </li>
     
-        <li>
-          <a href="pages.html" class="f-menu__heading">Pages</a>
-          <ul>
-            <li>
-              <a href="pages/home.html">Home</a>
-            </li>
-          </ul>
-        </li>
     
         <li>
           <a href="docs.html" class="f-menu__heading">Docs</a>
@@ -144,18 +128,16 @@
       </div>
 
 
-  
-<h1 data-f-toggle="labels">Components</h1>
+  <h1 data-f-toggle="labels">Components</h1>
 
-
-<div class="f-item-group" id="buttons">
+<div class="f-item-group" id="cards">
 
   <div class="f-item-heading-group">
-    <h2 class="f-item-heading" data-f-toggle="labels">Buttons</h2>
+    <h2 class="f-item-heading" data-f-toggle="labels">Cards</h2>
   </div>
-    <div class="f-item-group" id="buttons.alert">
+    <div class="f-item-group" id="cards.title_card">
       <div class="f-item-heading-group" data-f-toggle="labels">
-        <h3 class="f-item-heading">Alert</h3>
+        <h3 class="f-item-heading">Title Card</h3>
         <div class="f-item-controls">
           <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
             <svg>
@@ -169,452 +151,116 @@
           </span>
         </div>
       </div><div class="f-item-notes" data-f-toggle="notes">
-  <p><strong>Usage:</strong> Destructive or negative actions.</p>
-<p><strong>Examples:</strong> Delete, remove.</p>
+  <p>Cards</p>
 
 </div>
 <div class="f-item-preview">
-  <button class="btn btn-alert">Alert Button</button>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;button class=&quot;btn btn-alert&quot;&gt;Alert Button&lt;/button&gt;</code></pre>
-</div>
-
+  <div class="cards-list">
+    <div class="card title-card">
+        <header></header>
+        <article>
+            <h4><strong>I'm a title card</strong></h4>
+            <h6>Subheading</h6>
+            <hr>
+            <p>Maecenas et lacus imperdiet, pulvinar turpis quis, sagittis mauris.</p>
+        </article>
     </div>
-    <div class="f-item-group" id="buttons.neutral">
-      <div class="f-item-heading-group" data-f-toggle="labels">
-        <h3 class="f-item-heading">Neutral</h3>
-        <div class="f-item-controls">
-          <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-            <svg>
-              <use xlink:href="#f-icon-notes" />
-            </svg>
-          </span>
-          <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-            <svg>
-              <use xlink:href="#f-icon-code" />
-            </svg>
-          </span>
-        </div>
-      </div><div class="f-item-notes" data-f-toggle="notes">
-  <p><strong>Usage:</strong> Neutral actions.</p>
-<p><strong>Examples:</strong> Cancel, go back.</p>
 
-</div>
-<div class="f-item-preview">
-  <button class="btn btn-neutral">Neutral Button</button>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;button class=&quot;btn btn-neutral&quot;&gt;Neutral Button&lt;/button&gt;</code></pre>
-</div>
-
+    <div class="card title-card">
+        <header></header>
+        <article>
+            <h4><strong>I'm a title card</strong></h4>
+            <h6>Subheading</h6>
+            <hr>
+            <p>Maecenas et lacus imperdiet, pulvinar turpis quis, sagittis mauris.</p>
+        </article>
     </div>
-    <div class="f-item-group" id="buttons.primary">
-      <div class="f-item-heading-group" data-f-toggle="labels">
-        <h3 class="f-item-heading">Primary</h3>
-        <div class="f-item-controls">
-          <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-            <svg>
-              <use xlink:href="#f-icon-notes" />
-            </svg>
-          </span>
-          <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-            <svg>
-              <use xlink:href="#f-icon-code" />
-            </svg>
-          </span>
-        </div>
-      </div><div class="f-item-notes" data-f-toggle="notes">
-  <p><strong>Usage:</strong> Forward action indicator in a critical flow.</p>
-<p><strong>Examples:</strong> Log in, confirm purchase, connect a device.</p>
 
-</div>
-<div class="f-item-preview">
-  <button class="btn btn-primary">Primary Button</button>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;button class=&quot;btn btn-primary&quot;&gt;Primary Button&lt;/button&gt;</code></pre>
-</div>
-
+    <div class="card title-card">
+        <header></header>
+        <article>
+            <h4><strong>I'm a title card</strong></h4>
+            <h6>Subheading</h6>
+            <hr>
+            <p>Maecenas et lacus imperdiet, pulvinar turpis quis, sagittis mauris.</p>
+        </article>
     </div>
-    <div class="f-item-group" id="buttons.secondary">
-      <div class="f-item-heading-group" data-f-toggle="labels">
-        <h3 class="f-item-heading">Secondary</h3>
-        <div class="f-item-controls">
-          <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-            <svg>
-              <use xlink:href="#f-icon-notes" />
-            </svg>
-          </span>
-          <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-            <svg>
-              <use xlink:href="#f-icon-code" />
-            </svg>
-          </span>
-        </div>
-      </div><div class="f-item-notes" data-f-toggle="notes">
-  <p><strong>Usage:</strong> Client to server operations not associated with a critical flow. These buttons are positive in nature.</p>
-<p><strong>Examples:</strong> Refresh data, spawn a modal window.</p>
-
 </div>
-<div class="f-item-preview">
-  <button class="btn btn-secondary">Secondary Button</button>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;button class=&quot;btn btn-secondary&quot;&gt;Secondary Button&lt;/button&gt;</code></pre>
+  <pre><code class="language-markup">&lt;div class=&quot;cards-list&quot;&gt;
+    &lt;div class=&quot;card title-card&quot;&gt;
+        &lt;header&gt;&lt;/header&gt;
+        &lt;article&gt;
+            &lt;h4&gt;&lt;strong&gt;I&#x27;m a title card&lt;/strong&gt;&lt;/h4&gt;
+            &lt;h6&gt;Subheading&lt;/h6&gt;
+            &lt;hr&gt;
+            &lt;p&gt;Maecenas et lacus imperdiet, pulvinar turpis quis, sagittis mauris.&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card title-card&quot;&gt;
+        &lt;header&gt;&lt;/header&gt;
+        &lt;article&gt;
+            &lt;h4&gt;&lt;strong&gt;I&#x27;m a title card&lt;/strong&gt;&lt;/h4&gt;
+            &lt;h6&gt;Subheading&lt;/h6&gt;
+            &lt;hr&gt;
+            &lt;p&gt;Maecenas et lacus imperdiet, pulvinar turpis quis, sagittis mauris.&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card title-card&quot;&gt;
+        &lt;header&gt;&lt;/header&gt;
+        &lt;article&gt;
+            &lt;h4&gt;&lt;strong&gt;I&#x27;m a title card&lt;/strong&gt;&lt;/h4&gt;
+            &lt;h6&gt;Subheading&lt;/h6&gt;
+            &lt;hr&gt;
+            &lt;p&gt;Maecenas et lacus imperdiet, pulvinar turpis quis, sagittis mauris.&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
     </div>
 
 </div>
-
-
-<div class="f-item-group" id="checkbox">
+<div class="f-item-group" id="form">
 
   <div class="f-item-heading-group" data-f-toggle="labels">
-    <h2 class="f-item-heading">Checkbox</h2>
+    <h2 class="f-item-heading">Form</h2>
     <div class="f-item-controls">
-      
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg>
+          <use xlink:href="#f-icon-notes" />
+        </svg>
+      </span>
       <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
         <svg>
           <use xlink:href="#f-icon-code" />
         </svg>
       </span>
     </div>
-  </div>
+  </div><div class="f-item-notes" data-f-toggle="notes">
+  <p><strong>Usage:</strong> Stuff</p>
+
+</div>
 <div class="f-item-preview">
-  <label>
-    <input type="checkbox" /> Checkbox
-</label>
+  <form action="">
+    <div>
+        <input type="text" id="textInput" placeholder="Placeholder Text" /> </div>
+    <button class="btn btn-primary">Primary Button</button>
+</form>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;label&gt;
-    &lt;input type=&quot;checkbox&quot; /&gt; Checkbox
-&lt;/label&gt;</code></pre>
+  <pre><code class="language-markup">&lt;form action=&quot;&quot;&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;text&quot; id=&quot;textInput&quot; placeholder=&quot;Placeholder Text&quot; /&gt; &lt;/div&gt;
+    &lt;button class=&quot;btn btn-primary&quot;&gt;Primary Button&lt;/button&gt;
+&lt;/form&gt;</code></pre>
 </div>
 
 
 </div>
-
-
-<div class="f-item-group" id="lists">
-
-  <div class="f-item-heading-group">
-    <h2 class="f-item-heading" data-f-toggle="labels">Lists</h2>
-  </div>
-    <div class="f-item-group" id="lists.ordered">
-      <div class="f-item-heading-group" data-f-toggle="labels">
-        <h3 class="f-item-heading">Ordered</h3>
-        <div class="f-item-controls">
-          
-          <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-            <svg>
-              <use xlink:href="#f-icon-code" />
-            </svg>
-          </span>
-        </div>
-      </div>
-<div class="f-item-preview">
-  <ol>
-    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-    <li>Aliquam tincidunt mauris eu risus.</li>
-    <li>Vestibulum auctor dapibus neque.</li>
-</ol>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;ol&gt;
-    &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-    &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-    &lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-</div>
-
-    </div>
-    <div class="f-item-group" id="lists.unordered">
-      <div class="f-item-heading-group" data-f-toggle="labels">
-        <h3 class="f-item-heading">Unordered</h3>
-        <div class="f-item-controls">
-          
-          <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-            <svg>
-              <use xlink:href="#f-icon-code" />
-            </svg>
-          </span>
-        </div>
-      </div>
-<div class="f-item-preview">
-  <ul>
-    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-    <li>Aliquam tincidunt mauris eu risus.</li>
-    <li>Vestibulum auctor dapibus neque.</li>
-</ul>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;ul&gt;
-    &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-    &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-    &lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
-    </div>
-
-</div>
-
-
-<div class="f-item-group" id="paragraph">
-
-  <div class="f-item-heading-group" data-f-toggle="labels">
-    <h2 class="f-item-heading">Paragraph</h2>
-    <div class="f-item-controls">
-      
-      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-        <svg>
-          <use xlink:href="#f-icon-code" />
-        </svg>
-      </span>
-    </div>
-  </div>
-<div class="f-item-preview">
-  <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-    nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-    nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.&lt;/p&gt;</code></pre>
-</div>
-
-
-</div>
-
-
-<div class="f-item-group" id="radio">
-
-  <div class="f-item-heading-group" data-f-toggle="labels">
-    <h2 class="f-item-heading">Radio</h2>
-    <div class="f-item-controls">
-      
-      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-        <svg>
-          <use xlink:href="#f-icon-code" />
-        </svg>
-      </span>
-    </div>
-  </div>
-<div class="f-item-preview">
-  <label>
-    <input type="radio" name="groupName" id="radio1" /> Radio 1
-</label>
-
-<label>
-    <input type="radio" name="groupName" id="radio2" /> Radio 2
-</label>
-
-<label>
-    <input type="radio" name="groupName" id="radio3" /> Radio 3
-</label>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;groupName&quot; id=&quot;radio1&quot; /&gt; Radio 1
-&lt;/label&gt;
-
-&lt;label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;groupName&quot; id=&quot;radio2&quot; /&gt; Radio 2
-&lt;/label&gt;
-
-&lt;label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;groupName&quot; id=&quot;radio3&quot; /&gt; Radio 3
-&lt;/label&gt;</code></pre>
-</div>
-
-
-</div>
-
-
-<div class="f-item-group" id="select">
-
-  <div class="f-item-heading-group" data-f-toggle="labels">
-    <h2 class="f-item-heading">Select</h2>
-    <div class="f-item-controls">
-      
-      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-        <svg>
-          <use xlink:href="#f-icon-code" />
-        </svg>
-      </span>
-    </div>
-  </div>
-<div class="f-item-preview">
-  <select name="" id="">
-    <option value="">Option 1</option>
-    <option value="">Option 2</option>
-    <option value="">Option 3</option>
-    <option value="">Option 4</option>
-    <option value="">Option 5</option>
-</select>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;select name=&quot;&quot; id=&quot;&quot;&gt;
-    &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Option 4&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Option 5&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-</div>
-
-
-</div>
-
-
-<div class="f-item-group" id="table">
-
-  <div class="f-item-heading-group" data-f-toggle="labels">
-    <h2 class="f-item-heading">Table</h2>
-    <div class="f-item-controls">
-      
-      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-        <svg>
-          <use xlink:href="#f-icon-code" />
-        </svg>
-      </span>
-    </div>
-  </div>
-<div class="f-item-preview">
-  <table>
-    <thead>
-        <tr>
-            <th>Table Heading 1</th>
-            <th>Table Heading 2</th>
-            <th>Table Heading 3</th>
-        </tr>
-    </thead>
-    <tfoot>
-        <tr>
-            <th>Table Footer 1</th>
-            <th>Table Footer 2</th>
-            <th>Table Footer 3</th>
-        </tr>
-    </tfoot>
-    <tbody>
-        <tr>
-            <td>Table Cell 1</td>
-            <td>Table Cell 2</td>
-            <td>Table Cell 3</td>
-        </tr>
-        <tr>
-            <td>Table Cell 1</td>
-            <td>Table Cell 2</td>
-            <td>Table Cell 3</td>
-        </tr>
-        <tr>
-            <td>Table Cell 1</td>
-            <td>Table Cell 2</td>
-            <td>Table Cell 3</td>
-        </tr>
-        <tr>
-            <td>Table Cell 1</td>
-            <td>Table Cell 2</td>
-            <td>Table Cell 3</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Table Heading 1&lt;/th&gt;
-            &lt;th&gt;Table Heading 2&lt;/th&gt;
-            &lt;th&gt;Table Heading 3&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tfoot&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Table Footer 1&lt;/th&gt;
-            &lt;th&gt;Table Footer 2&lt;/th&gt;
-            &lt;th&gt;Table Footer 3&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/tfoot&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Table Cell 1&lt;/td&gt;
-            &lt;td&gt;Table Cell 2&lt;/td&gt;
-            &lt;td&gt;Table Cell 3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Table Cell 1&lt;/td&gt;
-            &lt;td&gt;Table Cell 2&lt;/td&gt;
-            &lt;td&gt;Table Cell 3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Table Cell 1&lt;/td&gt;
-            &lt;td&gt;Table Cell 2&lt;/td&gt;
-            &lt;td&gt;Table Cell 3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Table Cell 1&lt;/td&gt;
-            &lt;td&gt;Table Cell 2&lt;/td&gt;
-            &lt;td&gt;Table Cell 3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-</div>
-
-
-</div>
-
-
-<div class="f-item-group" id="text-input">
-
-  <div class="f-item-heading-group" data-f-toggle="labels">
-    <h2 class="f-item-heading">Text Input</h2>
-    <div class="f-item-controls">
-      
-      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-        <svg>
-          <use xlink:href="#f-icon-code" />
-        </svg>
-      </span>
-    </div>
-  </div>
-<div class="f-item-preview">
-  <label for="textInput">Text input</label>
-<input type="text" id="textInput" />
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;label for=&quot;textInput&quot;&gt;Text input&lt;/label&gt;
-&lt;input type=&quot;text&quot; id=&quot;textInput&quot; /&gt;</code></pre>
-</div>
-
-
-</div>
-
-
-<div class="f-item-group" id="textarea">
-
-  <div class="f-item-heading-group" data-f-toggle="labels">
-    <h2 class="f-item-heading">Textarea</h2>
-    <div class="f-item-controls">
-      
-      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-        <svg>
-          <use xlink:href="#f-icon-code" />
-        </svg>
-      </span>
-    </div>
-  </div>
-<div class="f-item-preview">
-  <textarea name="" id="" cols="30" rows="10"></textarea>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;textarea name=&quot;&quot; id=&quot;&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</code></pre>
-</div>
-
-
-</div>
-
 
 
 

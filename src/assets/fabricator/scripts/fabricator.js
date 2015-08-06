@@ -72,25 +72,6 @@ fabricator.getOptions = function () {
 
 
 /**
- * Build color chips
- */
-fabricator.buildColorChips = function () {
-
-  var chips = document.querySelectorAll('.f-color-chip'),
-    color;
-
-  for (var i = chips.length - 1; i >= 0; i--) {
-    color = chips[i].querySelector('.f-color-chip__color').innerHTML;
-    chips[i].style.borderTopColor = color;
-    chips[i].style.borderBottomColor = color;
-  }
-
-  return this;
-
-};
-
-
-/**
  * Add `f-active` class to active menu item
  */
 fabricator.setActiveItem = function () {
@@ -100,8 +81,7 @@ fabricator.setActiveItem = function () {
    */
   var parsedItems = function () {
 
-    var items = [],
-      id, href;
+    var items = [], id, href;
 
     for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
 
@@ -369,7 +349,6 @@ fabricator.setInitialMenuState = function () {
     .menuToggle()
     .allItemsToggles()
     .singleItemToggle()
-    .buildColorChips()
     .setActiveItem()
     .bindCodeAutoSelect();
 

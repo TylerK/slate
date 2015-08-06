@@ -14,7 +14,7 @@ inputBase() {
 
 textInput() {
   inputBase()
-  font-size $type-size--large
+  font-size 100%
   padding .7rem
 
   &:focus {
@@ -111,15 +111,23 @@ input[type=checkbox] {
 input[type=checkbox] + label {
   inputBase()
   border 1px solid $grey-medium
-  display block
-  width 1rem
-  height 1rem
+  display inline-block
+  width 1.2rem
+  height 1.2rem
+  cursor pointer
+}
+input[type=checkbox] + label span {
+  padding-left 1.5rem
+  line-height 1.2rem
 }
 input[type=checkbox]:checked + label {
-  border-width 2px
+  border-width 1px
   border-color $color-primary
   background $color-primary
-  background-image url('/global/images/icons/icon_checkmark.svg')
+  background-image url('/assets/toolkit/images/icons/icon_checkmark.svg')
+  background-size 80%
+  background-repeat no-repeat
+  background-position 50% 50%
 }
 input[type=checkbox]:focus,
 input[type=checkbox]:checked {

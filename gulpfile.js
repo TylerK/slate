@@ -8,7 +8,6 @@ var del           = require('del');
 var gulp          = require('gulp');
 var gutil         = require('gulp-util');
 var gulpif        = require('gulp-if');
-var imagemin      = require('gulp-imagemin');
 var prefix        = require('gulp-autoprefixer');
 var rename        = require('gulp-rename');
 var reload        = browserSync.reload;
@@ -115,7 +114,6 @@ gulp.task('fonts', function (cb) {
 // images
 gulp.task('images', ['favicon'], function () {
   return gulp.src(config.src.images)
-    .pipe(imagemin())
     .pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
 });
 

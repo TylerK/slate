@@ -1,29 +1,75 @@
 .f-color-chips {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow row wrap
+  margin: -1rem;
 }
 
 .f-color-chip {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 100%;
-  border-top-width: 8em;
-  border-top-style: solid;
-  border-bottom-width: 0;
-  border-bottom-style: solid;
-  background-color: #fff;
-  font-weight: 700;
-  font-size: 0.75em;
-  padding: 1em;
-  margin-bottom: 2em;
+  min-width: 18rem;
+  width calc(100% * 1 / 4 - 2rem)
+  max-width: 20rem;
+  margin: 1rem;
 
-  @media (min-width: 60em) {
-    flex-basis: 13em;
+  &:last-child {
+    margin-right: 0;
   }
 
-  .f-color-chip__color {
-    background-color: #fff;
-    content: attr(data-color);
-    font-weight: 400;
+  header {
+    border-top-width: 1.5rem;
+    border-top-style: solid;
+
+    &.color {
+      &--primary {
+        background-color: $colors['blue'];
+        border-top-color: darken($colors['blue'], 5%);
+      }
+      &--splash {
+        background-color: $colors['orange'];
+        border-top-color: darken($colors['orange'], 5%);
+      }
+      &--alert {
+        background-color: $colors['red'];
+        border-top-color: darken($colors['red'], 5%);
+      }
+      &--success {
+        background-color: $colors['green'];
+        border-top-color: darken($colors['green'], 5%);
+      }
+      &--greyDark {
+        background-color: $colors['greyDarker'];
+        border-top-color: darken($colors['greyDarker'], 7%);
+      }
+      &--greyMedium {
+        background-color: $colors['greyMedium'];
+        border-top-color: darken($colors['greyMedium'], 5%);
+      }
+      &--greyLight {
+        background-color: $colors['greyLight'];
+        border-top-color: darken($colors['greyLight'], 3%);
+      }
+      &--silver {
+        background-color: $colors['silver'];
+        border-top-color: darken($colors['silver'], 2%);
+      }
+      &--offWhite {
+        background-color: $colors['offWhite'];
+        border-top-color: darken($colors['offWhite'], 2%);
+      }
+    }
+  }
+}
+
+.f-color-codes {
+  font-size: .85rem;
+
+  li {
+    padding-top: .5rem;
+    margin-top: .5rem;
+    border-top: 1px solid $colors['offWhite']
+
+    &:first-child {
+      border-top: none;
+    }
   }
 }

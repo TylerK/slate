@@ -13,7 +13,7 @@ button-defaults() {
   display inline-block
   font-family $type-medium
   font-weight normal
-  font-size 1.2rem
+  font-size 100%
   border-width 1px
   border-style solid
   transition all $anim-duration--faster $anim-easing--easeOut
@@ -36,7 +36,7 @@ button($color, $type) {
 
   // All non-disabled buttons will utilize this hover effect
   &:hover {
-    box-shadow 0px 4px 0px 0px darken($color, 15%)
+    box-shadow 0px 3px 0px 0px darken($color, 20%)
     background lighten($color, 5%)
   }
 
