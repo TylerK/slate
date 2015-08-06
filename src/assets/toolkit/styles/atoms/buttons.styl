@@ -1,0 +1,239 @@
+//
+// Global button styles and mixins
+//---------------------------------------------------------
+buttonShadow(color, opacity) {
+  box-shadow 0px 3px 10px rgba(darken(color, 30%), opacity)
+}
+
+//
+// Global button styles
+//
+button-defaults() {
+  border-radius $radius--small
+  display inline-block
+  font-family $type-medium
+  font-weight normal
+  font-size 1.2rem
+  border-width 1px
+  border-style solid
+  transition all $anim-duration--faster $anim-easing--easeOut
+  pointer-events all
+  padding .5rem 1.5rem
+  appearance none
+
+  &:hover {
+    cursor pointer
+  }
+}
+
+
+//
+// Button colors
+//
+button($color, $type) {
+  background $color
+  border-color $color
+
+  // All non-disabled buttons will utilize this hover effect
+  &:hover {
+    box-shadow 0px 4px 0px 0px darken($color, 15%)
+    background lighten($color, 5%)
+  }
+
+  if $type == 'reversed' {
+    color #fff
+    &:hover {
+      color #fff
+    }
+  }
+
+  // Outlined buttons get a white bg, colored text, and colored border
+  if $type == 'outline' {
+    background #fff
+    color $color
+    border-color $color
+
+    &:hover {
+      background $color
+      color #fff
+      border-color $color
+    }
+  }
+
+  // Neutral buttons have white bg and light gray text and ivert on hover
+  if $type == 'neutral' {
+    background #fff
+    color $color
+    border-color #fff
+
+    &:hover {
+      background $color
+      color #fff
+      border-color $color
+    }
+  }
+
+  // Disabled buttons
+  else if $type == 'disabled' {
+    background $color
+    border-color $color
+    color #fff
+    pointer-events none
+
+    &:hover {
+      background $color
+      border-color $color
+    }
+  }
+}
+
+button-notification-defaults() {
+  border-radius 3px
+  display inline-block
+  font-family $type-medium
+  font-size inherit
+  border-width 1px
+  border-style solid
+  transition all $anim-duration--faster $anim-easing--easeOut
+  pointer-events all
+  padding .5rem 1.5rem
+
+  &:hover {
+    cursor pointer
+  }
+}
+
+button-notification($color, $type) {
+  background $color
+  border-color $color
+
+  if $type == 'reversed' {
+    color #fff
+    &:hover {
+      color #fff
+    }
+  }
+
+  // Outlined buttons get a white bg, colored text, and colored border
+  if $type == 'neutral' {
+    background #fff
+    color $color
+
+    &:hover {
+      background $color
+      color #fff
+    }
+  }
+
+  // All non-disabled buttons will utilize this hover effect
+  &:hover {
+    buttonShadow($color, 0.4)
+    background darken($color, 35%)
+  }
+
+  // Disabled buttons
+  if $type == 'disabled' {
+    background lighten($color, 25%)
+    border-color $color
+    color #fff
+    pointer-events none
+
+    &:hover {
+      background $color
+      border-color $color
+    }
+  }
+}
+
+//
+// Button sizes
+//
+button-size($size) {
+  sizes = {
+    regular : 1rem 3rem
+    small   : .7rem 2rem
+    smaller : .4rem 1.2rem
+  }
+  padding sizes[$size]
+}
+
+button-same() {
+  min-width 150px
+}
+
+//
+// Button declarations
+//
+.btn {
+  button-defaults()
+}
+.btn-primary {
+  button($color-splash, 'reversed')  // Yes this is intential
+}
+.btn-secondary {
+  button($color-primary, 'reversed') // Yes this is also intential
+}
+.btn-alert {
+  button($color-alert, 'reversed')
+}
+.btn-neutral {
+  button($grey-light, 'neutral')
+}
+.btn-same {
+  button-same()
+}
+.btn-outline-splash {
+  button($color-splash, 'outline')
+}
+.btn-disabled {
+  button($color-disabled, 'disabled')
+}
+.btn-size--regular {
+  button-size('regular')
+}
+.btn-size--small {
+  button-size('small')
+}
+.btn-size--smaller {
+  button-size('smaller')
+}
+
+.btn-notification {
+  button-notification-defaults()
+}
+
+.btn-notification--debug {
+  button-size('smaller')
+  button-notification($color-debug, 'neutral')
+}
+.btn-notification--debug.disabled {
+  button-notification($color-debug, 'disabled')
+}
+
+.btn-notification--error {
+  button-size('smaller')
+  button-notification($color-error, 'neutral')
+}
+.btn-notification--error.disabled {
+  button-notification($color-error, 'disabled')
+}
+
+.btn-notification--warning {
+  button-size('smaller')
+  button-notification($color-warning, 'neutral')
+}
+.btn-notification--warning.disabled {
+  button-notification($color-warning, 'disabled')
+}
+
+.btn-notification--info {
+  button-size('smaller')
+  button-notification($color-info, 'neutral')
+}
+.btn-notification--info.disabled {
+  button-notification($color-info, 'disabled')
+}
+.btn-full {
+  width 100%
+  text-align center
+}

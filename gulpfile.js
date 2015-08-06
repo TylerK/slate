@@ -35,6 +35,7 @@ var config = {
       toolkit: 'src/assets/toolkit/styles/toolkit.styl'
     },
     images: 'src/assets/toolkit/images/**/*',
+    fonts: 'src/assets/toolkit/fonts/**/*',
     views: 'src/toolkit/views/*.html'
   },
   dest: 'dist'
@@ -50,7 +51,6 @@ var webpackCompiler = webpack(webpackConfig);
 gulp.task('clean', function (cb) {
   del([config.dest], cb);
 });
-
 
 // styles
 gulp.task('styles:fabricator', function () {
@@ -81,9 +81,9 @@ gulp.task('styles:toolkit', function () {
     }))
     .pipe(prefix('last 1 version'))
     .pipe(gulpif(!config.dev, csso()))
-    .pipe(rename('f.css'))
+    .pipe(rename('toolkit.css'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.dest + '/assets/fabricator/styles'))
+    .pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
     .pipe(gulpif(config.dev, reload({stream:true})));
 });
 
@@ -106,6 +106,11 @@ gulp.task('scripts', function (done) {
   });
 });
 
+// fonts
+gulp.task('fonts', function (cb) {
+  return gulp.src(config.src.fonts)
+    .pipe(gulp.dest(config.dest + '/assets/toolkit/fonts'));
+});
 
 // images
 gulp.task('images', ['favicon'], function () {
@@ -136,6 +141,7 @@ gulp.task('serve', function () {
     server: {
       baseDir: config.dest
     },
+    open: false,
     notify: false,
     logPrefix: 'FABRICATOR'
   });
@@ -185,6 +191,7 @@ gulp.task('default', ['clean'], function () {
     'styles',
     'scripts',
     'images',
+    'fonts',
     'assemble'
   ];
 
