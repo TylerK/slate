@@ -105,10 +105,10 @@ textarea[readonly] {
 //
 // Checkbox
 //---------------------------------------------------------
-input[type=checkbox] {
+input.checkbox {
   display none
 }
-input[type=checkbox] + label {
+input.checkbox + label {
   inputBase()
   border 1px solid $grey-medium
   display inline-block
@@ -116,11 +116,11 @@ input[type=checkbox] + label {
   height 1.2rem
   cursor pointer
 }
-input[type=checkbox] + label span {
+input.checkbox + label span {
   padding-left 1.5rem
   line-height 1.2rem
 }
-input[type=checkbox]:checked + label {
+input.checkbox:checked + label {
   border-width 1px
   border-color $color-primary
   background $color-primary
@@ -129,8 +129,8 @@ input[type=checkbox]:checked + label {
   background-repeat no-repeat
   background-position 50% 50%
 }
-input[type=checkbox]:focus,
-input[type=checkbox]:checked {
+input.checkbox:focus,
+input.checkbox:checked {
   outline none
 }
 

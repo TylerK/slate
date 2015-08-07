@@ -1,0 +1,26 @@
+ul.link-list > li {
+  display inline-block
+  list-style-type none
+  white-space nowrap
+}
+ul.link-list > li:before {
+  content ' '
+  padding-right $spacing-thick
+  margin-right $spacing-thick
+  border-right 1px solid $color-primary
+}
+ul.link-list.text-reversed > li:before {
+  border-right 1px solid lighten($color-primary, 80%)
+}
+ul.link-list > li:first-child:before {
+  content none
+}
+ul.link-list.no-divider > li:before {
+  display none
+}
+ul.link-list.no-divider > li {
+  margin-right $type-spacing--loose
+}
+ul.link-list.no-divider > li:last-child {
+  margin-right 0
+}

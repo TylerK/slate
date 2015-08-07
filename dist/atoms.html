@@ -78,6 +78,9 @@
             <li>
               <a href="atoms.html#text-input">Text Input</a>
             </li>
+            <li>
+              <a href="atoms.html#toggle">Toggle</a>
+            </li>
           </ul>
         </li>
         <li>
@@ -88,6 +91,15 @@
             </li>
             <li>
               <a href="components.html#form">Form</a>
+            </li>
+            <li>
+              <a href="components.html#link-list">Link List</a>
+            </li>
+            <li>
+              <a href="components.html#notifications">Notifications</a>
+            </li>
+            <li>
+              <a href="components.html#tool-tip">Tool Tip</a>
             </li>
           </ul>
         </li>
@@ -263,11 +275,11 @@
     </div>
   </div>
 <div class="f-item-preview">
-  <input id="named_checkbox" type="checkbox" />
+  <input class='checkbox' id="named_checkbox" type="checkbox" />
 <label for="named_checkbox"></label>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup">&lt;input id=&quot;named_checkbox&quot; type=&quot;checkbox&quot; /&gt;
+  <pre><code class="language-markup">&lt;input class=&#x27;checkbox&#x27; id=&quot;named_checkbox&quot; type=&quot;checkbox&quot; /&gt;
 &lt;label for=&quot;named_checkbox&quot;&gt;&lt;/label&gt;</code></pre>
 </div>
 
@@ -291,6 +303,47 @@
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
   <pre><code class="language-markup">&lt;input type=&quot;text&quot; id=&quot;textInput&quot; placeholder=&quot;Placeholder Text&quot; /&gt;</code></pre>
+</div>
+
+
+</div>
+<div class="f-item-group" id="toggle">
+
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <h2 class="f-item-heading">Toggle</h2>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg>
+          <use xlink:href="#f-icon-notes" />
+        </svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg>
+          <use xlink:href="#f-icon-code" />
+        </svg>
+      </span>
+    </div>
+  </div><div class="f-item-notes" data-f-toggle="notes">
+  <p><strong>Usage:</strong> TODO: Write this.</p>
+
+</div>
+<div class="f-item-preview">
+  <div class='toggle-switch'>
+    <input type='checkbox' id='UNIQUE_NAME' />
+    <label for='UNIQUE_NAME'>
+        <em class='on'>On</em>
+        <em class='off'>Off</em>
+    </label>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+  <pre><code class="language-markup">&lt;div class=&#x27;toggle-switch&#x27;&gt;
+    &lt;input type=&#x27;checkbox&#x27; id=&#x27;UNIQUE_NAME&#x27; /&gt;
+    &lt;label for=&#x27;UNIQUE_NAME&#x27;&gt;
+        &lt;em class=&#x27;on&#x27;&gt;On&lt;/em&gt;
+        &lt;em class=&#x27;off&#x27;&gt;Off&lt;/em&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 
