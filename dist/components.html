@@ -11,6 +11,7 @@
 
   <!-- toolkit styles -->
   <link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
   <!-- /toolkit styles -->
 
 </head>
@@ -116,18 +117,7 @@
         </li>
     
     
-        <li>
-          <a href="docs.html" class="f-menu__heading">Docs</a>
-          <ul>
-            <li>
-              <a href="docs.html#javascript">Javascript</a>
-            </li>
-          </ul>
-        </li>
-    
       </ul>
-    
-    
     </div>
     <!-- /fabricator menu -->
     <div class="f-container">
@@ -319,43 +309,241 @@
   <div class="f-item-heading-group">
     <h2 class="f-item-heading" data-f-toggle="labels">Notifications</h2>
   </div>
-    <div class="f-item-group" id="notifications.alert">
+    <div class="f-item-group" id="notifications.multiple">
       <div class="f-item-heading-group" data-f-toggle="labels">
-        <h3 class="f-item-heading">Alert</h3>
+        <h3 class="f-item-heading">Multiple</h3>
         <div class="f-item-controls">
-          
+          <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+            <svg>
+              <use xlink:href="#f-icon-notes" />
+            </svg>
+          </span>
           <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
             <svg>
               <use xlink:href="#f-icon-code" />
             </svg>
           </span>
         </div>
-      </div>
+      </div><div class="f-item-notes" data-f-toggle="notes">
+  <p><strong>Note:</strong> These are intended to drop down from the top of the site and remain fixed until dismissed.</p>
+<p><strong>Usage:</strong> Instances where we need to display more than one notification to the user.</p>
+<ul>
+<li><strong>Error:</strong> There has been a serious problem, or the user has completed a negative action, e.g: burning a device.</li>
+<li><strong>Info:</strong> We just need to surface a neutral notification to the user.</li>
+<li><strong>Success:</strong> User has completed a positive action, e.g: Adding a device or connection.</li>
+</ul>
+
+</div>
 <div class="f-item-preview">
-  
+  <div class='notifications error'>
+    <div class='notifications--pagination'>
+        <a href='#' class='action'>
+            <i class='fa fa-chevron-left'></i>
+        </a>
+        <a href='#' class='action'>
+            <i class='fa fa-chevron-right'></i>
+        </a>
+    </div>
+    <div class='notifications--messages'>
+        <p>[1 / 2] Notification Message goes here</p>
+    </div>
+    <div class='notifications--actions'>
+        <a href='#' class='action'>
+            <i class='fa fa-close'></i>
+        </a>
+    </div>
+</div>
+
+<div class='notifications info'>
+    <div class='notifications--pagination'>
+        <a href='#' class='action'>
+            <i class='fa fa-chevron-left'></i>
+        </a>
+        <a href='#' class='action'>
+            <i class='fa fa-chevron-right'></i>
+        </a>
+    </div>
+    <div class='notifications--messages'>
+        <p>[1 / 2] Notification Message goes here</p>
+    </div>
+    <div class='notifications--actions'>
+        <a href='#' class='action'>
+            <i class='fa fa-close'></i>
+        </a>
+    </div>
+</div>
+
+<div class='notifications success'>
+    <div class='notifications--pagination'>
+        <a href='#' class='action'>
+            <i class='fa fa-chevron-left'></i>
+        </a>
+        <a href='#' class='action'>
+            <i class='fa fa-chevron-right'></i>
+        </a>
+    </div>
+    <div class='notifications--messages'>
+        <p>[1 / 2] Notification Message goes here</p>
+    </div>
+    <div class='notifications--actions'>
+        <a href='#' class='action'>
+            <i class='fa fa-close'></i>
+        </a>
+    </div>
+</div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup"></code></pre>
+  <pre><code class="language-markup">&lt;div class=&#x27;notifications error&#x27;&gt;
+    &lt;div class=&#x27;notifications--pagination&#x27;&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-chevron-left&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-chevron-right&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;notifications--messages&#x27;&gt;
+        &lt;p&gt;[1 / 2] Notification Message goes here&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;notifications--actions&#x27;&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-close&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#x27;notifications info&#x27;&gt;
+    &lt;div class=&#x27;notifications--pagination&#x27;&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-chevron-left&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-chevron-right&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;notifications--messages&#x27;&gt;
+        &lt;p&gt;[1 / 2] Notification Message goes here&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;notifications--actions&#x27;&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-close&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#x27;notifications success&#x27;&gt;
+    &lt;div class=&#x27;notifications--pagination&#x27;&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-chevron-left&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-chevron-right&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;notifications--messages&#x27;&gt;
+        &lt;p&gt;[1 / 2] Notification Message goes here&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;notifications--actions&#x27;&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-close&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
     </div>
-    <div class="f-item-group" id="notifications.info">
+    <div class="f-item-group" id="notifications.single">
       <div class="f-item-heading-group" data-f-toggle="labels">
-        <h3 class="f-item-heading">Info</h3>
+        <h3 class="f-item-heading">Single</h3>
         <div class="f-item-controls">
-          
+          <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+            <svg>
+              <use xlink:href="#f-icon-notes" />
+            </svg>
+          </span>
           <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
             <svg>
               <use xlink:href="#f-icon-code" />
             </svg>
           </span>
         </div>
-      </div>
+      </div><div class="f-item-notes" data-f-toggle="notes">
+  <p><strong>Note:</strong> These are intended to drop down from the top of the site and remain fixed until dismissed.</p>
+<p><strong>Usage</strong>: Instances where we need to display a single notification to the user.</p>
+<ul>
+<li><strong>Error:</strong> There has been a serious problem, or the user has completed a negative action, e.g: burning a device.</li>
+<li><strong>Info:</strong> We just need to surface a neutral notification to the user.</li>
+<li><strong>Success:</strong> User has completed a positive action, e.g: Adding a device or connection.</li>
+</ul>
+
+</div>
 <div class="f-item-preview">
-  
+  <div class='notifications error'>
+    <div class='notifications--messages'>
+        <p>Notification Message goes here</p>
+    </div>
+    <div class='notifications--actions'>
+        <a href='#' class='action'>
+            <i class='fa fa-close'></i>
+        </a>
+    </div>
+</div>
+
+<div class='notifications info'>
+    <div class='notifications--messages'>
+        <p>Notification Message goes here</p>
+    </div>
+    <div class='notifications--actions'>
+        <a href='#' class='action'>
+            <i class='fa fa-close'></i>
+        </a>
+    </div>
+</div>
+
+<div class='notifications success'>
+    <div class='notifications--messages'>
+        <p>Notification Message goes here</p>
+    </div>
+    <div class='notifications--actions'>
+        <a href='#' class='action'>
+            <i class='fa fa-close'></i>
+        </a>
+    </div>
+</div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-  <pre><code class="language-markup"></code></pre>
+  <pre><code class="language-markup">&lt;div class=&#x27;notifications error&#x27;&gt;
+    &lt;div class=&#x27;notifications--messages&#x27;&gt;
+        &lt;p&gt;Notification Message goes here&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;notifications--actions&#x27;&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-close&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#x27;notifications info&#x27;&gt;
+    &lt;div class=&#x27;notifications--messages&#x27;&gt;
+        &lt;p&gt;Notification Message goes here&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;notifications--actions&#x27;&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-close&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#x27;notifications success&#x27;&gt;
+    &lt;div class=&#x27;notifications--messages&#x27;&gt;
+        &lt;p&gt;Notification Message goes here&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;notifications--actions&#x27;&gt;
+        &lt;a href=&#x27;#&#x27; class=&#x27;action&#x27;&gt;
+            &lt;i class=&#x27;fa fa-close&#x27;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
     </div>
