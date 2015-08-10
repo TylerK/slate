@@ -146,48 +146,6 @@ fabricator.setActiveItem = function () {
 
 
 /**
- * Click handler to primary menu toggle
- * @return {Object} fabricator
- */
-fabricator.menuToggle = function () {
-
-  // shortcut menu DOM
-  var toggle = fabricator.dom.menuToggle;
-
-  var options = fabricator.getOptions();
-
-  // toggle classes on certain elements
-  var toggleClasses = function () {
-    options.menu = !fabricator.dom.root.classList.contains('f-menu-active');
-    fabricator.dom.root.classList.toggle('f-menu-active');
-
-    if (fabricator.test.sessionStorage) {
-      sessionStorage.setItem('fabricator', JSON.stringify(options));
-    }
-  };
-
-  // toggle classes on click
-  toggle.addEventListener('click', function () {
-    toggleClasses();
-  });
-
-  // close menu when clicking on item (for collapsed menu view)
-  var closeMenu = function () {
-    if (!window.matchMedia(fabricator.options.mq).matches) {
-      toggleClasses();
-    }
-  };
-
-  for (var i = 0; i < fabricator.dom.menuItems.length; i++) {
-    fabricator.dom.menuItems[i].addEventListener('click', closeMenu);
-  }
-
-  return this;
-
-};
-
-
-/**
  * Handler for preview and code toggles
  * @return {Object} fabricator
  */
@@ -307,49 +265,14 @@ fabricator.bindCodeAutoSelect = function () {
 
 
 /**
- * Open/Close menu based on session var.
- * Also attach a media query listener to close the menu when resizing to smaller screen.
- */
-fabricator.setInitialMenuState = function () {
-
-  // root element
-  var root = document.querySelector('html');
-
-  var mq = window.matchMedia(fabricator.options.mq);
-
-  // if small screen
-  var mediaChangeHandler = function (list) {
-    if (!list.matches) {
-      root.classList.remove('f-menu-active');
-    } else {
-      if (fabricator.getOptions().menu) {
-        root.classList.add('f-menu-active');
-      } else {
-        root.classList.remove('f-menu-active');
-      }
-    }
-  };
-
-  mq.addListener(mediaChangeHandler);
-  mediaChangeHandler(mq);
-
-  return this;
-
-};
-
-
-/**
  * Initialization
  */
 (function () {
 
   // invoke
   fabricator
-    .setInitialMenuState()
-    .menuToggle()
     .allItemsToggles()
     .singleItemToggle()
     .setActiveItem()
     .bindCodeAutoSelect();
-
 }());

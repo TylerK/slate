@@ -51,12 +51,5 @@ Pull requests are welcome!
 
 ## Feature TODO's
 
-* Responsive break point selector for web views
-* Tier 1 nav for platform selection:
-    - Global
-    - iOS
-    - OSX
-    - Windows
-    - Android
-    - Web
-
+* Responsive break point selector
+* Mobile and desktop specific UI

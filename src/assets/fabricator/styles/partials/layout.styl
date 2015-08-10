@@ -33,6 +33,7 @@ body {
   padding: 0 2rem;
   z-index: 0;
   min-height: 100vh;
+  margin-left: 14rem;
 
   > h1 {
     color: $colors['blue'];
@@ -40,14 +41,4 @@ body {
     margin: 0 -2rem;
     padding: 2rem 2rem 3rem;
   }
-
-  .f-menu-active & {
-    transform: translate($menu-width, 0);
-
-    @media (min-width: 60em) {
-      margin-left: $menu-width;
-      transform: translate(0, 0);
-    }
-  }
-
 }

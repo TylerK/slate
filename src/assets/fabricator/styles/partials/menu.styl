@@ -4,7 +4,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  transform: translate(-($menu-width), 0);
   width: $menu-width;
   height: 100%;
   z-index: 1;
@@ -12,10 +11,6 @@
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
-  .f-menu-active & {
-    transform: translate(0, 0);
-  }
 
   ul {
     margin-top: 0;
