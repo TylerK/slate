@@ -1,0 +1,37 @@
+.form {
+  width: 26rem;
+  padding: 4rem;
+
+  .row {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  label {
+    display: block;
+    font-size: .7rem;
+    color: $grey-light;
+  }
+
+  input:focus + label {
+    color: $blue-bright !important;
+  }
+
+  .input-text,
+  .input-email,
+  .input-password {
+    width: 100%;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    > a,
+    > button {
+      margin-left: 1rem;
+    }
+  }
+
+}

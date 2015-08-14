@@ -30,6 +30,19 @@
     </li>
     {{/each}}
 
+    {{#each structures}}
+    <li>
+      <a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
+      <ul>
+        {{#each items}}
+        <li>
+          <a href="{{@../key}}.html#{{@key}}">{{name}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </li>
+    {{/each}}
+
 
   </ul>
 </div>

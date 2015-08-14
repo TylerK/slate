@@ -1,0 +1,60 @@
+//
+// Global button styles and mixins
+//---------------------------------------------------------
+button-defaults() {
+  display: block;
+  background: #fff;
+  border-width: 1px;
+  border-style: solid;
+  transition: all $faster $easeOut;
+  padding: .4em 1.3em;
+  font-size: 100%;
+  appearance: none;
+  pointer-events: all;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn {
+  button-defaults()
+
+  &-primary {
+    color: darken($color-splash, 20%);
+    border-color: $color-splash;
+    &:hover {
+      background: $color-splash;
+      color: #fff;
+    }
+  }
+
+  &-secondary {
+    color: darken($color-primary, 10%);
+    border-color: $color-primary;
+    &:hover {
+      background: $color-primary;
+      color: #fff;
+    }
+  }
+
+  &-alert {
+    color: $color-alert;
+    border-color: $color-alert;
+    &:hover {
+      background: $color-alert;
+      color: #fff;
+    }
+  }
+
+  &-neutral {
+    color: $grey-medium;
+    border-color: $grey-light;
+    &:hover {
+      background: $grey-light;
+      color: #fff;
+    }
+  }
+}
+
+

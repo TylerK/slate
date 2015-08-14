@@ -11,6 +11,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  border-right: 1px solid $colors['silver']
 
   ul {
     margin-top: 0;
@@ -42,7 +43,6 @@
     line-height: 1;
 
     &:hover {
-      color: #fff;
       cursor: pointer;
     }
 
@@ -52,7 +52,8 @@
   }
 
   .f-menu__heading {
-    color: #fff;
+    color: $colors['menuHeading'];
+    font-weight: bold;
     padding-left: 1.5rem;
     font-size: .75rem;
     text-transform: uppercase;

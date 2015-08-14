@@ -6,29 +6,29 @@
   // background when auto-filling a form element
   box-shadow 0 0 0 100px white inset !important
 }
+
 inputBase() {
-  appearance none
-  border 1px solid lighten($grey-medium, 50%)
-  border-radius $radius--small
+  appearance: none;
+  border: none;
+  background: transparent;
 }
 
 textInput() {
   inputBase()
-  font-size 100%
-  padding .7rem
+  font-size: 100%;
+  padding: .7rem;
+  padding-left: 0;
+  box-shadow: 0px 1px 0px 0px $grey-light
+  transition: box-shadow $fast $easeInOut
 
   &:focus {
-    outline none
+    outline: none;
+    box-shadow: 0px 2px 0px 0px $blue-bright
   }
-
-  &::-ms-clear {
-    display: none;
-  }
-
-  &::-ms-reveal {
-    display: none;
-  }
+  &::-ms-clear { display: none; }
+  &::-ms-reveal { display: none; }
 }
+
 inputBaseReadOnly() {
   appearance none
   background lighten($grey-lighter, 50%)
@@ -64,57 +64,22 @@ textarea[readonly] {
   textInputReadOnly()
 }
 
-.ui-input-text,
-.ui-input-text input,
-.ui-input-text label {
-  width 100%
-  height 100%
-}
-
-.ui-input-text {
-  position relative
-  height 3.6rem
-  margin-bottom 1.2rem
-}
-.ui-input-text input,
-.ui-input-text label {
-  position absolute
-}
-.ui-input-text.input-icon input{
-  padding-left 3.8rem
-}
-.ui-input-text label {
-  width 3.5rem
-  background-repeat no-repeat
-  background-size 1.5rem
-  background-position 1.2rem
-  pointer-events none
-}
-.ui-input-text label.icon-email {
-  background-image url('/global/images/icons/form_email.svg')
-}
-.ui-input-text label.icon-password {
-  background-image url('/global/images/icons/form_password.svg')
-}
-.ui-input-text label.icon-firstName,
-.ui-input-text label.icon-lastName {
-  background-image url('/global/images/icons/form_user_name.svg')
-}
-
-
 //
 // Checkbox
 //---------------------------------------------------------
 input.checkbox {
-  display none
+  display: none;
+  cursor: pointer;
 }
 input.checkbox + label {
-  inputBase()
-  border 1px solid $grey-medium
+  border: 1px solid $grey-light;
   display inline-block
-  width 1.2rem
-  height 1.2rem
+  width 1rem
+  height 1rem
   cursor pointer
+  background-size 10%
+  background-position 40% 50%
+  transition all $faster $easeInOut
 }
 input.checkbox + label span {
   padding-left 1.5rem
@@ -127,7 +92,7 @@ input.checkbox:checked + label {
   background-image url('/assets/toolkit/images/icons/icon_checkmark.svg')
   background-size 80%
   background-repeat no-repeat
-  background-position 50% 50%
+  background-position 40% 50%
 }
 input.checkbox:focus,
 input.checkbox:checked {

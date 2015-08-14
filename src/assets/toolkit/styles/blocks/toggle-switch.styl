@@ -7,7 +7,6 @@ $ui-toggle-switch--switchWidth   = 50px
 .toggle-switch label span {
   user-select none
   cursor pointer
-  border-radius $radius--small
 }
 .toggle-switch {
   width 100%
@@ -16,15 +15,13 @@ $ui-toggle-switch--switchWidth   = 50px
   height $ui-toggle-switch--height
   border 1px solid $grey-lighter
 }
-.toggle-switch.on {
-  border 1px solid $color-primary
-}
 .toggle-switch label {
   display block
   height 100%
   width 100%
   position relative
   overflow hidden
+  cursor pointer
 }
 .toggle-switch em {
   display block
@@ -39,7 +36,8 @@ $ui-toggle-switch--switchWidth   = 50px
   color #fff
   margin-left 0px
   left 0px
-  transition all $anim-duration--fast $anim-easing--easeInOut
+  transition all $faster $easeInOut
+  cursor pointer
 }
 .toggle-switch input {
   display none
@@ -47,7 +45,7 @@ $ui-toggle-switch--switchWidth   = 50px
 .toggle-switch input:checked + label em {
   left 100px
   margin-left -($ui-toggle-switch--switchWidth)
-  background $color-success
+  background $color-primary
 }
 .toggle-switch input:checked + label em.off {
   opacity 0
