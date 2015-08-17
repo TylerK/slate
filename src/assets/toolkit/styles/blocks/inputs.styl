@@ -23,7 +23,7 @@ textInput() {
 
   &:focus {
     outline: none;
-    box-shadow: 0px 2px 0px 0px $blue-bright
+    box-shadow: 0px 2px 0px 0px $color-primary
   }
   &::-ms-clear { display: none; }
   &::-ms-reveal { display: none; }
@@ -31,7 +31,7 @@ textInput() {
 
 inputBaseReadOnly() {
   appearance none
-  background lighten($grey-lighter, 50%)
+  background lighten($grey-light, 50%)
   border-radius $radius--small
   color $grey-dark
   pointer-events none
@@ -74,8 +74,8 @@ input.checkbox {
 input.checkbox + label {
   border: 1px solid $grey-light;
   display inline-block
-  width 1rem
-  height 1rem
+  width 1.216rem
+  height 1.216rem
   cursor pointer
   background-size 10%
   background-position 40% 50%
@@ -97,6 +97,25 @@ input.checkbox:checked + label {
 input.checkbox:focus,
 input.checkbox:checked {
   outline none
+}
+
+//
+// Radio
+//---------------------------------------------------------
+input.radio {
+  display: none;
+}
+input.radio + label {
+  cursor: pointer;
+  display: inline-block;
+  width: 1.216rem;
+  height: 1.216rem;
+  border: 1px solid $grey-light;
+  border-radius: 50%;
+}
+input.radio:checked + label {
+  border-color: $color-primary;
+  background-color: $color-primary;
 }
 
 
