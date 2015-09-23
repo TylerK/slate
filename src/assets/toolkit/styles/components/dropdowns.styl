@@ -1,0 +1,30 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  // Drop down states
+  &--wrapper {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    > ul {
+      margin-top: 1.618em;
+    }
+  }
+
+  &--button &--wrapper > ul {
+    margin-top: 2.168em;
+  }
+
+  &:hover > &--wrapper {
+    display: block;
+  }
+
+  > .navigation-list {
+    // Arbitrary for this ui kit
+    width: 10rem !important;
+  }
+}
