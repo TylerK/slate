@@ -1,4 +1,4 @@
-# Lyve UI Kit
+# Slate UI Kit
 
 This UI toolkit is a highly-modular design system meant for rapid UI development and cross-platform consistency. It contains different atoms and components that can be assembled into more complex page layouts. Initial roll out will only have web. Other platforms will be following shortly. 
 
@@ -52,4 +52,4 @@ Pull requests are welcome!
 ## Feature TODO's
 
 * Responsive break point selector
-* Mobile and desktop specific UI
+* Mobile specific UI
