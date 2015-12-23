@@ -13,7 +13,7 @@ export default class extends React.Component {
   render() {
     return (
       <ul className='link-list'>
-        {this.props.children.map((child) => {
+        {this.props.children.map(child => {
           return (
             <li key={child.props.id}>{child}</li>
           );
