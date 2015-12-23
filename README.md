@@ -6,7 +6,7 @@ Unopinionated React UI components with a slightly opinionated style.
     - [x] Basic button
     - [ ] Headings
     - [ ] Icons
-    - [ ] Link list
+    - [x] Link list
     - [ ] Panels
     - [ ] Tooltips
 * **Components**
