@@ -1,0 +1,16 @@
+@import '~styles/colors';
+
+.link-list {
+  margin: 1rem;
+
+  > li {
+    display: inline;
+    padding: 0 2rem;
+    text-align: center;
+    border-right: 1px solid $grey5;
+  }
+
+  > li:last-child {
+    border-right: none;
+  }
+}
