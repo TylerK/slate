@@ -1,0 +1,43 @@
+@import '~styles/colors';
+
+.button {
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: 100;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-default {
+    background: $blue1;
+    color: $white2;
+    &:hover, &.is-hovered {
+      background: lighten($blue1, 10%);
+    }
+  }
+
+  &-alert {
+    background: $orange1;
+    color: $white2;
+    &.is-hovered {
+      background: lighten($orange1, 10%);
+    }
+  }
+
+  &-success {
+    background: $green1;
+    color: $white2;
+    &.is-hovered {
+      background: lighten($green1, 10%);
+    }
+  }
+
+  &-disabled {
+    background: $grey5;
+    color: $grey3;
+    cursor: default;
+  }
+}

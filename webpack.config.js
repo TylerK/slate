@@ -29,7 +29,11 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('index.css')
   ],
+  resolve: {
+    extensions: ['', '.js', '.scss'],
+    modulesDirectories: ['src', 'node_modules']
+  },
   sassLoader: {
-    includePaths: [path.resolve(__dirname, './src')]
+    includePaths: [path.resolve(__dirname, './src/styles')]
   }
 };

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render } from 'react-dom';
 import { Button } from './lib/blocks';
@@ -8,7 +7,9 @@ import './index.scss';
 export default class App extends React.Component {
   render() {
     return (
-      <div>Hello World</div>
+      <div>
+        <Button type='disabled'>Press me</Button>
+      </div>
     );
   }
 }

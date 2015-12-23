@@ -3,23 +3,25 @@ Unopinionated React UI components with a slightly opinionated style.
 
 ## Components
 * **Blocks**
-    - [ ] Buttons
-    - [ ] Links
-    - [ ] Panels
-    - [ ] Tooltips
+    - [x] Basic button
     - [ ] Headings
     - [ ] Icons
+    - [ ] Links
     - [ ] Lists (vertical & horizontal)
+    - [ ] Panels
+    - [ ] Tooltips
 * **Components**
     - [ ] Cards
-    - [ ] Dropdowns
-    - [ ] Text inputs
-    - [ ] Date inputs
     - [ ] Checkboxes & Radios
-    - [ ] Range sliders
-    - [ ] Notifications
-    - [ ] Wizard steps
+    - [ ] Date inputs
+    - [ ] Dropdowns
     - [ ] Navigation Bar
+    - [ ] Notifications
+    - [ ] Progress bar
+    - [ ] Progress button with indicator
+    - [ ] Text inputs
+    - [ ] Range sliders
+    - [ ] Wizard steps
 
 ## Contribute
 ```
